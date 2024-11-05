@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR.js Postcard with DJ Lineup</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <!-- AR.js Scene -->
+  <a-scene embedded arjs="sourceType: webcam;">
+
+    <!-- Marker (Use "hiro" or replace with your custom pattern) -->
+    <a-marker preset="hiro">
+
+      <!-- DJ Lineup and Event Details -->
+      <a-entity position="0 0.2 0">
+        <a-text
+          value="DJ Lineup\n1. DJ Spark\n2. DJ Wave\n3. DJ Echo"
+          color="yellow"
+          align="center"
+          position="0 0.3 0"
+          rotation="-90 0 0"
+          width="2"
+        ></a-text>
+
+        <a-text
+          value="Date: November 25, 2024\nLocation: Sunset Beach Club"
+          color="white"
+          align="center"
+          position="0 0 0"
+          rotation="-90 0 0"
+          width="2"
+        ></a-text>
+      </a-entity>
+
+    </a-marker>
+
+    <!-- AR.js Camera -->
+    <a-entity camera></a-entity>
+
+  </a-scene>
+</body>
+</html>
